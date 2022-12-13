@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>yara</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <div id="app">
+    <div>
+        <button id="import" onclick="importData()">Import file</button>
+        <p id="imported"></p>
+        <input type="file" id="file" @change="onFileChange" style="display: none">
+        
+        <form id="submit" action="POST">
+            <button id="scan" onclick="scanFile()">Scan File</button>
+            <p id="scanned"></p>
+            <input type="submit">
+        </form>
+
+        
+        <h3>Results</h3>
+        <input type="text" v-model="results">
+
+    <script src="index.js"></script>
+    </div>
+   </div>
+
+</body>
+</html>
