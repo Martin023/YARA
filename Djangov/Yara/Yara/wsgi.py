@@ -1,5 +1,5 @@
 """
-WSGI config for YARA project.
+WSGI config for Yara project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'YARA.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Yara.settings')
 
 application = get_wsgi_application()
