@@ -3,6 +3,8 @@ from django.http import request
 from .forms import UploadFileForm
 from django.http import HttpResponseRedirect
 from django.core.files.storage import FileSystemStorage
+import requests
+import json
 
 
 
@@ -22,3 +24,4 @@ def index(request):
     else:
         form = UploadFileForm()
     return render(request, 'index.html', {'form': form})
+    
