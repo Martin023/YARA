@@ -15,10 +15,10 @@
     <body>
         <h1>Index</h1>
         <h2> Welcome</h2>
-        <form action="" method="post">
+        <form method="POST" class="post-form" enctype="multipart/form-data">
             {% csrf_token %}
-            <input type="file" name="url" placeholder="upload file">
-            <input type="submit" value="Scan">
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
         </form>
         
         <script src="" async defer></script>
