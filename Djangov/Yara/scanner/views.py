@@ -24,4 +24,3 @@ def index(request):
     else:
         form = UploadFileForm()
     return render(request, 'index.html', {'form': form})
-    
