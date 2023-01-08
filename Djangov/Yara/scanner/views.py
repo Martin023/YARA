@@ -26,7 +26,7 @@ def index(request):
     return render(request, 'index.html', {'form': form})
 
 
-def uploaded_file_handler(uploaded_file_url):
+def uploaded_file_handler():
     files = {
         'file': (open('uploaded_file_url', 'rb'))
     }
