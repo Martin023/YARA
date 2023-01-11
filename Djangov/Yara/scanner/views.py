@@ -16,10 +16,7 @@ def index(request):
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             handle_uploaded_file(request.FILES['file'])
-            return HttpResponse('Successfully uploaded')
-
-        
-            
+            return HttpResponse('Successfully uploaded')        
     else:
         form = UploadFileForm()
 
@@ -27,10 +24,9 @@ def index(request):
 
 
 def uploaded_file_handler():
-    files = {
-        'file': (open('uploaded_file_url', 'rb'))
-    }
-
+    files = {'file': open('scanner/static/upload/'+f.name, 'rb')}
+    r = requests.post('https://yaraify-api.abuse.ch/api/v1/', files=files, verify=True)
+    print(r.text)
 
     response = requests.post('https://yaraify-api.abuse.ch/api/v1/', files=files, verify=True)
     print(response.text)
